@@ -62,8 +62,7 @@ class App extends React.Component {
   // FORM SEARCH
   handleCitySubmit = (e) => {
     e.preventDefault();
-
-    const API = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&units=metric&appid=${APIKey}`;
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&units=metric&appid=${APIKey}`;
 
     fetch(API)
       .then((response) => {
